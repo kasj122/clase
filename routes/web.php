@@ -26,11 +26,11 @@ Route::get('/contacto', function (){
 
 Route::get('/bienvenida/{nombre}/{apellido?}', function ($nombre, $apellido = null){
     //return $nombre . ' ' . $apellido;
-    return view('paginas.bienvenida')
-        ->with([
+    return view('paginas.bienvenida', compact('nombre', 'apellido'));
+        /*->with([
             'nombre' => $nombre,
             'apellido' => $apellido
-        ]);
+        ]);*/
 });
 
 
