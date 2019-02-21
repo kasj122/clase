@@ -11,6 +11,8 @@
 <h1>Bienvenida</h1>
 <p>
     Hola {{$nombre}} {{$apellido}}
+    <br>
+    nombre completo: {{$nombre_completo}}
 </p>
 </body>
 </html>

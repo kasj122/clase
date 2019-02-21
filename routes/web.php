@@ -26,19 +26,16 @@ Route::get('/contacto', function (){
 
 Route::get('/bienvenida/{nombre}/{apellido?}', function ($nombre, $apellido = null){
     //return $nombre . ' ' . $apellido;
-    return view('paginas.bienvenida', compact('nombre', 'apellido'));
-        /*->with([
-            'nombre' => $nombre,
-            'apellido' => $apellido
-        ]);*/
+    return view('paginas.bienvenida', compact('nombre', 'apellido'))
+        ->with([
+            'nombre_completo' => $nombre . ' ' . $apellido,
+        ]);
 });
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 
-
-
-
-
-
-/***/
+//
