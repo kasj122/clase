@@ -23,3 +23,22 @@ Route::get('/informacion', function (){
 Route::get('/contacto', function (){
     return view('paginas.contacto');
 });
+
+Route::get('/bienvenida/{nombre}/{apellido?}', function ($nombre, $apellido = null){
+    //return $nombre . ' ' . $apellido;
+    return view('paginas.bienvenida')
+        ->with([
+            'nombre' => $nombre,
+            'apellido' => $apellido
+        ]);
+});
+
+
+
+
+
+
+
+
+
+/***/
