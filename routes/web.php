@@ -21,6 +21,8 @@ Route::get('/contacto','PaginasController@contacto');
 
 Route::get('/bienvenida', 'PaginasController@bienvenida');
 
+Route::get('/equipo', 'PaginasController@equipo');
+
 
 Auth::routes();
 
